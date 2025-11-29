@@ -10,6 +10,10 @@ CREATE TABLE akun (
 CREATE TABLE owner (
   id_owner serial PRIMARY KEY,
   id_akun int REFERENCES akun(id_akun),
+  nama_kos varchar(100),
+  alamat_kos text,
+  nomor_telepon varchar(14) UNIQUE,
+  nomor_ktp varchar(16) UNIQUE,
   created_at timestamp with time zone DEFAULT now()
 );
 
