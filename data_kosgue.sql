@@ -1,8 +1,7 @@
 CREATE TABLE akun (
   id_akun serial PRIMARY KEY,
   nama_lengkap varchar(100),
-  email varchar(100) UNIQUE,
-  whatsapp varchar(14) UNIQUE,
+  whatsapp varchar(14),
   password varchar(255),
   created_at timestamp with time zone DEFAULT now()
 );
